@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+body {
+  font-family: sans-serif;
+}
+
+* {
+  color: white;
+}
+body {
+  background-color: #080808;
+}
+#tasklist::-webkit-scrollbar {
+  display: none;
+}
+#AllTasks::-webkit-scrollbar {
+  display: none;
+}
+#btn{
+  color: black;
+  box-shadow: 5px 5px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
