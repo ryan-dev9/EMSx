@@ -12,14 +12,14 @@ body {
 body {
   background-color: #080808;
 }
-#tasklist::-webkit-scrollbar {
-  display: none;
-}
 #AllTasks::-webkit-scrollbar {
   display: none;
 }
 #btn{
   color: black;
   box-shadow: 5px 5px 0px 1px rgba(0, 0, 0, 0.2);
+}
+#tasklist::-webkit-scrollbar{
+  display: none;
 }
 

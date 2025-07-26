@@ -235,12 +235,9 @@ const employees = [
         failed: false
       }
     ]
-  }
-];
-
-const admin = [
+  },
   {
-    id: 1,
+    id: 6,
     firstName: "Anjali",
     email: "anjali@e.com",
     password: "123"
@@ -248,13 +245,13 @@ const admin = [
 ];
 
 
+
+
 export const setLocalStorage = () => {
   localStorage.setItem("employees",JSON.stringify(employees))
-  localStorage.setItem("admin",JSON.stringify(admin))
 }
 export const getLocalStorage = () => {
   const employees = JSON.parse(localStorage.getItem('employees'))
-  const admin = JSON.parse(localStorage.getItem('admin'))
   
-  return {employees, admin}
+  return {employees}
 }

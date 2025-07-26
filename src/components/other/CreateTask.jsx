@@ -6,8 +6,8 @@ const CreateTask = () => {
   const [userData, setUserData] = useContext(AuthContext)
 
   const [title, setTitle] = useState('')
-  const [taskDesc, setTaskDesc] = useState('')
-  const [taskDate, setTaskDate] = useState('')
+  const [description, setDescription] = useState('')
+  const [date, setDate] = useState('')
   const [assignTo, setAssignTo] = useState('')
   const [category, setCategory] = useState('')
   const [newTask, setNewTask] = useState('')
@@ -15,7 +15,7 @@ const CreateTask = () => {
   const submiteHandler = (e) => {
       e.preventDefault()
       
-      setNewTask({title, taskDesc, taskDate, category, newTask:true, active:false, completed:false, failed:true })
+      setNewTask({title, description, date, category, newTask:true, active:false, completed:false, failed:true })
 
       const data = userData
 
@@ -31,8 +31,8 @@ const CreateTask = () => {
 
       setAssignTo('')
       setCategory('')
-      setTaskDate('')
-      setTaskDesc('')
+      setDate('')
+      setDescription('')
       setTitle('')
 
   }
@@ -52,8 +52,8 @@ const CreateTask = () => {
             <div>
               <h3 className='text-xl text-gray-300 mb-0.5'>Date</h3>
               <input 
-              value={taskDate}
-              onChange={(e)=>{setTaskDate(e.target.value)}}
+              value={date}
+              onChange={(e)=>{setDate(e.target.value)}}
                className='w-4/5 rounded px-1.5 py-1 text-[17px] border-[1px] border-gray-400 mb-4' type="date" />
             </div>
             <div>
@@ -75,8 +75,8 @@ const CreateTask = () => {
           <div className='w-2/5 flex flex-col items-start'>
              <h3 className='text-xl text-gray-300 mb-0.5'>Description</h3>
              <textarea 
-              value={taskDesc}
-              onChange={(e)=>{setTaskDesc(e.target.value)}}
+              value={description}
+              onChange={(e)=>{setDescription(e.target.value)}}
                className='w-full h-44 mb-5.5 text-[17px] font-semibold py-2 px-4 rounded-xl outline-none bg-transparent border-[1px] border-gray-400' name="" id="" placeholder='Enter description'></textarea>
              <button className='bg-blue-600 py-2 px-5 hover:bg-blue-500 rounded-xl text-[20px] font-light mt-4 w-full'>Create Task</button>
           </div>
