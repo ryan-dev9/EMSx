@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 import React, { useContext, useEffect, useState } from "react";
 import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
@@ -47,6 +48,7 @@ function App() {
       {user == 'admin' ? <AdminDashboard changeUser={setUser} data={userData}/> : ''}
       {user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData.data}/> : ''}
 
+      <Analytics />
       <SpeedInsights />
     </div>
 );
