@@ -1,8 +1,8 @@
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import React, { useContext, useEffect, useState } from "react";
 import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
-import { getLocalStorage, setLocalStorage } from "./utils/localStorage";
 import { AuthContext } from "./context/AuthProvider";
 
 function App() {
@@ -46,6 +46,8 @@ function App() {
       {!user ? <Login handleLogin={handleLogin}/> : ''}
       {user == 'admin' ? <AdminDashboard changeUser={setUser} data={userData}/> : ''}
       {user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData.data}/> : ''}
+
+      <SpeedInsights />
     </div>
 );
 
