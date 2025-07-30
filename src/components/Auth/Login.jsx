@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Footer from '../other/Footer'
 
 const Login = ({handleLogin}) => {
 
@@ -20,7 +21,7 @@ const Login = ({handleLogin}) => {
     // Login Button
 
   return (
-   <div className='h-screen flex justify-center bg-black'>
+   <div className=' h-screen flex justify-center bg-black'>
         <h1 className='absolute top-[20%] sm:top-25 text-8xl sm:text-9xl text-black font-[orbitron] font-semibold'>REMS</h1>
 
         <div className='w-full h-full  flex absolute sm:relative top-[10%] sm:items-center justify-center'>
@@ -31,6 +32,8 @@ const Login = ({handleLogin}) => {
                 <button className='mt-8 w-[50%] h-[45px] border-2 border-blue-600 flex justify-center items-center py-6 text-3xl bg-black rounded-xl'>Login</button>
            </form>
         </div>
+
+     <Footer/>
    </div>
   )
 }

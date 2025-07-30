@@ -5,6 +5,7 @@ import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { AuthContext } from "./context/AuthProvider";
+import Footer from "./components/other/Footer";
 
 function App() {
 
@@ -44,9 +45,11 @@ function App() {
 
     return (
      <>
+     <div>
       {!user ? <Login handleLogin={handleLogin}/> : ''}
       {user == 'admin' ? <AdminDashboard changeUser={setUser} data={userData}/> : ''}
       {user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData.data}/> : ''}
+     </div>
 
       <Analytics />
       <SpeedInsights />
