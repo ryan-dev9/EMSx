@@ -49,8 +49,8 @@ function App() {
       {!user ? <Login handleLogin={handleLogin}/> : ''}
       {user == 'admin' ? <AdminDashboard changeUser={setUser} data={userData}/> : ''}
       {user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData.data}/> : ''}
-      <Footer/>
      </div>
+      <Footer/>
 
       <Analytics />
       <SpeedInsights />
