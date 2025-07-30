@@ -11,6 +11,7 @@ body {
 }
 body {
   background-color: #080808;
+  box-sizing: border-box;
 }
 #AllTasks::-webkit-scrollbar {
   display: none;
@@ -25,4 +26,7 @@ body {
 #Login-box{
   background-color: #1a1a1a;
   box-shadow: 0px 0px 10px 1px rgb(105, 105, 105);
+}
+#login-form{
+  box-shadow: 0 0 10px 2px #686868;
 }

@@ -6,7 +6,7 @@ import NewTask from './NewTask'
 
 const TaskList = ({data}) => {
   return (
-    <div id='tasklist' className='flex items-center justify-start flex-nowrap overflow-x-auto gap-5 h-[53%] w-full rounded-xl py-5 mt-10'>
+    <div id='tasklist' className='flex items-center justify-start  overflow-x-auto gap-5 h-[53%] w-full rounded-xl py-5 mt-5 sm:mt-10'>
         {data.tasks.map((elem, idx)=>{
           if(elem.active){
             return <AcceptTask key={idx} data={elem}/>

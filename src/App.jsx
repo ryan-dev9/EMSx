@@ -43,14 +43,14 @@ function App() {
       console.log(userData)
 
     return (
-     <div>
+     <>
       {!user ? <Login handleLogin={handleLogin}/> : ''}
       {user == 'admin' ? <AdminDashboard changeUser={setUser} data={userData}/> : ''}
       {user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData.data}/> : ''}
 
       <Analytics />
       <SpeedInsights />
-    </div>
+    </>
 );
 
 
